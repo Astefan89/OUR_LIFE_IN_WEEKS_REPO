@@ -11,7 +11,7 @@ let age;
 calcBtn.addEventListener('click', function(){
     age = ageInput.value.trim();
 
-    if (age == "") {
+    if (age == "" || age == "-" || age ==","|| age > 90) {
 
         let alert = document.querySelector(".alert");
         alert.classList.add('active');
@@ -20,7 +20,7 @@ calcBtn.addEventListener('click', function(){
             alert.classList.remove('active');
         }, 3000)
 
-    }else if(isNaN(age) == true || age == "-" || age =="," || age < 90) {
+    }else if(isNaN(age) == true ) {
 
         clearInterval(myTimer);
 
