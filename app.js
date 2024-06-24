@@ -20,7 +20,7 @@ calcBtn.addEventListener('click', function(){
             alert.classList.remove('active');
         }, 3000)
 
-    }else if(isNaN(age) == true){
+    }else if(isNaN(age) == true || age == "-" || age =="," || age < 90) {
 
         clearInterval(myTimer);
 
