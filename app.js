@@ -11,7 +11,7 @@ let age;
 calcBtn.addEventListener('click', function(){
     age = ageInput.value.trim();
 
-    if (age == "" || age == "-" || age ==","|| age > 90) {
+    if (age === "" || age === ","|| age > 90 || age < 0 || age === ".") {
 
         let alert = document.querySelector(".alert");
         alert.classList.add('active');
@@ -36,8 +36,8 @@ calcBtn.addEventListener('click', function(){
 
         let remmaining_years = 90 - age;
         let remmaining_weeks = remmaining_years * 52;
-
         result.innerHTML = separteNumbersInComma(remmaining_weeks);
+       
         ageInput.value = "";
     }
 });
@@ -48,3 +48,5 @@ function separteNumbersInComma(weeks)  {
 resetBtn.addEventListener('click' , function(){
     refresh.click();
 })
+
+  
